@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <form action="" id="myForm">
+                <h1>Register Account</h1>
+                <p>Create your account</p>
+                <div class="container-2">
+
+                    <div class="input-box">
+
+                        <div class="input usern">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <input type="text" placeholder="Username" id="username">
+                        </div>
+                        <small class="error" id="userError">invalid user name</small>
+
+
+                        <div class="input Email">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Email Address" id="email">
+                        </div>
+                        <small class="error" id="mailError">invalid mail id</small>
+
+                        <div class="input password">
+                            <i class="fa-solid fa-lock"></i> 
+                            <input type="password"placeholder="Enter password" id="password"><span id="show">show</span>
+                        </div>
+                        <small class="error" id="passError">invalid password</small>
+
+                        <div class="input confirm">
+                            <i class="fa-solid fa-lock"></i> 
+                            <input type="text" placeholder="Confirm password" id="cpassword"></div>
+                        <small class="error" id="cpassError">password not match</small>
+
+                    </div>
+
+                    <button type="submit" id="btn">Sign Up</button>
+
+                    <p class="alaccount">Already have an account? <a href="">Login</a></p>
+                </div>
+
+            </form>
+
+            <p class="signupwith">or sign up with</p>
+
+            <div class="linkssocial">
+                <a href=""><i class="fa-brands fa-facebook" id="fb"></i></a>
+                <a href=""><i class="fa-brands fa-google" id="google"></i></a>
+                <a href=""><i class="fa-brands fa-twitter" id="twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/7248089bf2.js" crossorigin="anonymous"></script>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background: url(background.jpg);
+    padding: 10px;
+}
+
+.container{
+    width: 100%;
+    max-width: 450px;
+    padding: 30px 40px;
+    background: white;
+    margin: 5% auto;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 5px brown;
+
+}
+
+.container h1{
+    font-size: 22px;
+    color: rgb(22, 22, 122);
+}
+
+.container p{
+     color: rgb(22, 22, 122);
+    font-size: 12px;
+
+}
+
+.container-2{
+    margin-top: 25px;
+    border-top: 1px solid  rgb(218, 214, 214);
+    border-bottom: 1px solid rgb(218, 214, 214);
+    padding: 20px 0;
+    margin-bottom: 10px;
+}
+
+.input-box{
+display: flex;
+flex-direction: column;
+
+}
+
+
+.container-2 .input{
+width: 100%;
+border: 1px solid black;
+border-radius: 5px;
+box-shadow: 0 0 3px black;
+margin: 2px 0;
+padding: 8px 10px;
+display: flex;
+align-items: center;
+gap: 5px;
+transition: all 0.3s ease;
+}
+
+.container-2 .error{
+    height: 12px;
+    visibility: hidden;
+    color: red;
+    font-size: 10px;
+    text-align: left;
+    margin-bottom: 2px;
+}
+
+.error.visibility{
+    visibility: visible;
+}
+
+.container-2 .input:hover{
+    border: 1px solid blue;
+}
+
+.container-2 .input:focus-within{
+    border: 1px solid blue;
+    box-shadow: 0 0 8px rgba(0,0,255,0.5);
+}
+
+.container-2 .input input{
+    flex: 1;
+    padding: 0 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+}
+
+.container-2 .input i{
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.container-2 i:hover{
+    transform: translateY(-5px) scale(1.1);
+}
+
+
+.container-2 #btn{
+    font-size: 20px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    background: blue;
+    color: white;
+    font-weight: 600;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container-2 #btn:hover{
+    background: darkblue;
+    transform: scale(1.02);
+}
+
+.container-2 .alaccount{
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+.container-2 .alaccount a{
+    color: blue;
+}
+
+.signupwith{
+    margin-bottom: 20px;
+    margin-top: 25px;
+
+}
+
+.linkssocial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.linkssocial i{
+    font-size: 35px;
+}
+
+.linkssocial a i{
+    transition: transform 0.3s ease, color 0.3s ease;
+
+}
+
+.linkssocial a i:hover{
+    transform: translateY(-5px) scale(1.1);
+}
+
+
+.linkssocial #fb{
+    color: blue;
+}
+
+.linkssocial #google{
+    color: red;
+}
+
+.linkssocial #twitter{
+    color: skyblue;
+}
+
+.input.bsuccess{
+    border-color: green;
+    box-shadow: 0 0 5px green;
+}
+
+.input.berror{
+    border-color: red;
+    box-shadow: 0 0 5px red;
+}
+
+#show{
+    font-size: 10px;
+    color: blue;
+    cursor: pointer;
+}
