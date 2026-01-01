@@ -50,13 +50,17 @@ function  cpasswordHandel(msg){
         error(".confirm")
         cpassError.style.visibility = "visible";
         cpassError.innerText = msg;
-        return 
+        return false;
     }else{
         success(".confirm")
           cpassError.style.visibility = "hidden";
         cpassError.innerText = "";
         return true;
     }
+}else{
+    cpassword.value = "";
+    error(".confirm");
+    return false;
 }
 }
 
@@ -65,11 +69,18 @@ function passwordHandel(){
 
      passError.style.visibility = "visible";
 
+     if(password.value !== cpassword.value){
+        
+    cpasswordHandel("password is mismatch");
+    error(".confirm");
+    ;
+     }
+
 
     if(pass.length < 8){
         error(".password");
         passError.innerText = "Password should be 8 digit"
-       return       
+       return    false ;  
     }
 
     let passArr = [...pass];
@@ -79,14 +90,14 @@ function passwordHandel(){
     if(!isLowerCase){
         error(".password")
          passError.innerText = "atleast one lower case"
-       return
+       return false;
     
     }
     
       if(!isUpperCase){
         error(".password");
              passError.innerText = "atleast one Upper case"
-       return
+       return false;
     
     }
 
@@ -101,7 +112,7 @@ function passwordHandel(){
     if(!isNum){
         error(".password")
              passError.innerText = "atleast one number"
-       return 
+       return false;
     }
 
     let specialchr = ["@", "#", "$", "&"];
@@ -111,7 +122,7 @@ function passwordHandel(){
     if(!isSpecial){
     error(".password")
             passError.innerText = "one special charrector"
-       return 
+       return false;
     }
 
     success(".password")
@@ -131,7 +142,8 @@ function userHandel(msg) {
     if (isUserCorrect || user.trim() == "") {
         userError.innerText = msg;
         error(".usern");
-        return userError.style.visibility = "visible";
+         userError.style.visibility = "visible";
+         return false;
     } else {
         success(".usern");
         userError.innerText = "";
@@ -150,7 +162,8 @@ function mailHandel(msg) {
     if (!emailPattern.test(mail)) {
         mailError.innerText = msg;
         error(".Email");
-        return mailError.style.visibility = "visible";
+        mailError.style.visibility = "visible";
+        return false;
     } else {
         success(".Email")
         mailError.innerText = "";
